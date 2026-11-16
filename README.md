@@ -99,7 +99,7 @@ nano .env
 ## Step 3 - Run the application
 
 ```bash
-python app/main.py
+.venv/bin/python app/main.py
 ```
 
 The program shows a menu:
