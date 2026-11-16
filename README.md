@@ -5,7 +5,7 @@ A command-line Python application that connects to a PostgreSQL database and imp
 ## Repository structure
 
 ```text
-assignment3_starter/
+COMP3005-Assignment3-StudentCRUD/
 ├── app/
 │   └── main.py              # CRUD functions and interactive menu
 ├── sql/
@@ -72,7 +72,29 @@ ssh -N -L 5433:127.0.0.1:5432 YOUR_VM_USERNAME@YOUR_VM_IP
 
 Leave that SSH session running, then set `DB_HOST=127.0.0.1` and `DB_PORT=5433` in `.env`. This example assumes PostgreSQL is listening on the VM's localhost port 5432. Alternatively, run the Python application directly on the database VM if Python and the dependencies are available there.
 
-For the Carleton course VM setup, keep the university VPN connected and the SSH tunnel window open while using the app. Configure `.env` with `DB_NAME=assignment_db`, `DB_HOST=127.0.0.1`, and `DB_PORT=5433`. The PostgreSQL login is separate from SSH.
+For the Carleton course VM setup, connect to the university VM through SSH and run the Python application directly on Ubuntu. PostgreSQL runs locally on the same VM, so no separate SSH tunnel is needed.
+
+Configure the private `.env` file using the following settings:
+
+```dotenv
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_NAME=assignment_db
+DB_USER=assignment3_app
+DB_PASSWORD="YOUR_DATABASE_PASSWORD"
+```
+
+Replace the password placeholder with the PostgreSQL password for the application account. This account must have the required permissions on the database, students table, and student ID sequence. Do not commit `.env` to GitHub.
+
+To run the application on Ubuntu from the project directory:
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+cp .env.example .env
+nano .env
+.venv/bin/python app/main.py
+```
 
 ## Step 3 - Run the application
 
