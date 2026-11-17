@@ -132,10 +132,9 @@ The application handles invalid menu inputs and database errors. All SQL queries
 7. Show the code structure or end the demo. Ensure the video is **5 minutes or less** and can be opened by a grader without requesting access.
 
 ## Demonstration video
+The following video demonstrates the PostgreSQL database setup and all four required CRUD operations (SELECT, INSERT, UPDATE, and DELETE), including verification of database changes in pgAdmin.
+**Video link:** https://drive.google.com/file/d/1BpGOH_UzS_FWG0XtVT-GHNuoJi88QNlZ/view?usp=sharing
 
-**Video link:** REPLACE_WITH_YOUR_PUBLIC_OR_UNLISTED_SHAREABLE_VIDEO_URL
-
-Replace the line above with your working video URL before submitting.
 
 ## GitHub / submission
 
